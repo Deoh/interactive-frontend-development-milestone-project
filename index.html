@@ -1,22 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Popular Baby Names</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Popular Baby Names</title>
 
-    <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="static/css/dc.min.css" type="text/css" />
-    <link rel="stylesheet" href="static/css/style.css" type="text/css" />
+	<link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="static/css/dc.min.css" type="text/css" />
+	<link rel="stylesheet" href="static/css/style.css" type="text/css" />
 
-    <script type="text/javascript" src="static/js/d3.min.js"></script>
-    <script type="text/javascript" src="static/js/crossfilter.min.js"></script>
-    <script type="text/javascript" src="static/js/dc.min.js"></script>
-    <script type="text/javascript" src="static/js/queue.min.js"></script>
-    <script type="text/javascript" src="static/js/graph.js"></script>
+	<script type="text/javascript" src="static/js/d3.min.js"></script>
+	<script type="text/javascript" src="static/js/crossfilter.min.js"></script>
+	<script type="text/javascript" src="static/js/dc.min.js"></script>
+	<script type="text/javascript" src="static/js/queue.min.js"></script>
+	<script type="text/javascript" src="static/js/graph.js"></script>
 </head>
+
 <body>
-    
+	<div class="container">
+		<div class="row">
+			<h1>Suicide Rates</h1>
+		</div>
+
+		<div class="row">
+			<div class="col-md-offset-5">Select Year</div>
+		</div>
+		<div class="row">
+			<div class="col-md-offset-5" id="year-selector"></div>
+		</div>
+
+        <div class="row">
+            <div>In this study of people who have comitted suicide, Men are more the double that of Female. </div>
+        </div>
+		<div class="row">
+			<h3>Gender of suicide victim</h3>
+
+			<div class="col-md-6" id="gender-balance"></div>
+			<div class="col-md-6" id="suicide-per-gender-pie"></div>
+		</div>
+
+		<div class="row">
+			<h3>Suicide per age group</h3>
+			<div id="age-balance"></div>
+			<h3>age Breakdown</h3>
+			<div id="suicide-per-age-pie"></div>
+		</div>
+
+		<div class="row">
+			<h3>Suicide per generation</h3>
+			<div id="generation-balance"></div>
+			<h3>Generation Breakdown</h3>
+			<div id="suicide-per-generation-pie"></div>
+		</div>
+
+		<div class="row">
+			<h3>Suicide distribution by Generation</h3>
+			<div id="suicide-distribution"></div>
+		</div>
+
+		<div class="row">
+			<h3>years to salary corelation</h3>
+			<div id="scatter"></div>
+		</div>
+
+		<div class="row">
+			<div id="line-graph"></div>
+		</div>
+		<div class="row">
+			<div id="line-graph-2"></div>
+		</div>
+
+
+
+
+
+
+
+
+
+	</div>
 </body>
+
 </html>
