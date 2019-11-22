@@ -82,7 +82,7 @@ function show_suicide_per_generation(ndx) {
     dc.barChart("#generation-balance")
         .width(550)
         .height(250)
-        .margins({ top: 10, right: 50, bottom: 30, left: 50 })
+        .margins({ top: 10, right: 60, bottom: 30, left: 60 })
         .dimension(dim)
         .group(group)
         .transitionDuration(500)
@@ -110,8 +110,8 @@ function show_suicide_per_age_pie(ndx) {
     var count_group = age_dim.group().reduceSum(dc.pluck('suicides_no'));
 
         dc.pieChart('#suicide-per-age-pie')
-            .height(660)
-            .radius(200)
+            .height(250)
+            .radius(100)
             .transitionDuration(1500)
             .dimension(age_dim)
             .group(count_group);
@@ -122,8 +122,8 @@ function show_suicide_per_generation_pie(ndx) {
     var count_group = gen_dim.group().reduceSum(dc.pluck('suicides_no'));
 
         dc.pieChart('#suicide-per-generation-pie')
-            .height(660)
-            .radius(200)
+            .height(250)
+            .radius(100)
             .transitionDuration(1500)
             .dimension(gen_dim)
             .group(count_group);
@@ -162,9 +162,9 @@ function show_generation_distribution(ndx) {
     var silentByGender = genByGender(dim, "Silent");
 
     dc.barChart("#suicide-distribution")
-        .width(350)
+        .width(400)
         .height(250)
-        .margins({ top: 10, right: 100, bottom: 30, left: 30 })
+        .margins({ top: 10, right: 150, bottom: 30, left: 30 })
         .dimension(dim)
         .group(boomersByGender, "Boomers")
         .stack(gigenByGender, "GI Generation")
@@ -194,8 +194,8 @@ function show_years_to_suicide_correlation(ndx) {
         var minDate = date_dim.bottom(1)[0].year;
         var maxDate = date_dim.top(1)[0].year;
         dc.lineChart("#scatter")
-            .width(1000)
-            .height(300)
+            .width(990)
+            .height(250)
             .margins({top: 10, right: 50, bottom: 30, left: 50})
             .dimension(date_dim)
             .group(total_spend_per_date)
@@ -226,10 +226,12 @@ function show_suicide_line_graph (ndx) {
         var compositeChart = dc.compositeChart('#line-graph');
         compositeChart
             .width(990)
-            .height(200)
+            .height(250)
+            .margins({top: 10, right: 50, bottom: 30, left: 50})
             .dimension(date_dim)
             .x(d3.time.scale().domain([minDate, maxDate]))
-            .yAxisLabel("Suicide")
+            .xAxisLabel("Year")
+            .yAxisLabel("Suicide No.")
             .legend(dc.legend().x(80).y(20).itemHeight(13).gap(5))
             .renderHorizontalGridLines(true)
             .compose([
@@ -268,10 +270,12 @@ function show_suicide_line_graph_2 (ndx) {
         var compositeChart = dc.compositeChart('#line-graph-2');
         compositeChart
             .width(990)
-            .height(200)
+            .height(250)
+            .margins({top: 10, right: 50, bottom: 30, left: 50})
             .dimension(date_dim)
             .x(d3.time.scale().domain([minDate, maxDate]))
-            .yAxisLabel("Suicide")
+            .xAxisLabel("Year")
+            .yAxisLabel("Suicide No.")
             .legend(dc.legend().x(80).y(20).itemHeight(13).gap(5))
             .renderHorizontalGridLines(true)
             .compose([
@@ -294,6 +298,6 @@ function show_suicide_line_graph_2 (ndx) {
                     .colors('purple')
                     .group(silentSuicidePerYear, 'Silent'),
             ])
-            .brushOn(false)
+            .brushOn(true)
             .render();
 }
