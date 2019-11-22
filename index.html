@@ -19,68 +19,134 @@
 </head>
 
 <body>
-	<div class="container">
-		<div class="row">
-			<h1>Suicide Rates</h1>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Suicide Rates</a>
+			</div>
 		</div>
+	</nav>
 
-		<div class="row">
-			<div class="col-md-offset-5">Select Year</div>
-		</div>
-		<div class="row">
-			<div class="col-md-offset-5" id="year-selector"></div>
-		</div>
+	<main>
+		<section class="section">
+			<div class="container">
+				<div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                        <h1>Suicide Rates</h1>                    
+                    </div>
+                </div>
+				<div class="row">
+                    <div class="col-12">
+                        <h4 class="selector-heading">Select Year</h4>
+                        <div id="year-selector"></div>
+                    </div>
+                </div>
+			</div>
+		</section>
 
-        <div class="row">
-            <div>In this study of people who have comitted suicide, Men are more the double that of Female. </div>
-        </div>
-		<div class="row">
-			<h3>Gender of suicide victim</h3>
+		<section class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 text-center">
+                        <p class="section-paragraph">In this study of people who have comitted suicide, Men are more the double that of Female.</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 text-center">
+                        <p class="section-paragraph">In this study of people who have comitted suicide, Men are more the double that of Female.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 text-center" id="gender-balance" class="custom-chart"></div>
+                    <div class="col-xs-12 col-sm-6 text-center" id="suicide-per-gender-pie" class="custom-chart"></div>
+                </div>
+            </div>
+        </section>
 
-			<div class="col-md-6" id="gender-balance"></div>
-			<div class="col-md-6" id="suicide-per-gender-pie"></div>
-		</div>
+		<section class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 text-center">
+                        <p class="section-paragraph">In this study of people who have comitted suicide, Men are more the double that of Female.</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 text-center">
+                        <p class="section-paragraph">In this study of people who have comitted suicide, Men are more the double that of Female.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 text-center" id="age-balance" class="custom-chart"></div>
+                    <div class="col-xs-12 col-sm-6 text-center" id="suicide-per-age-pie" class="custom-chart"></div>
+                </div>
+            </div>
+        </section>
 
-		<div class="row">
-			<h3>Suicide per age group</h3>
-			<div id="age-balance"></div>
-			<h3>age Breakdown</h3>
-			<div id="suicide-per-age-pie"></div>
-		</div>
+		<section class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 text-center">
+                        <p class="section-paragraph">In this study of people who have comitted suicide, Men are more the double that of Female.</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 text-center">
+                        <p class="section-paragraph">In this study of people who have comitted suicide, Men are more the double that of Female.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 text-center" id="generation-balance" class="custom-chart"></div>
+                    <div class="col-xs-12 col-sm-6 text-center" id="suicide-per-generation-pie" class="custom-chart"></div>
+                </div>
+            </div>
+        </section>
 
-		<div class="row">
-			<h3>Suicide per generation</h3>
-			<div id="generation-balance"></div>
-			<h3>Generation Breakdown</h3>
-			<div id="suicide-per-generation-pie"></div>
-		</div>
+		<section class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="section-paragraph">In this study of people who have comitted suicide, Men are more the double that of Female.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center" id="suicide-distribution" class="custom-chart"></div>
+                </div>
+            </div>
+        </section>
 
-		<div class="row">
-			<h3>Suicide distribution by Generation</h3>
-			<div id="suicide-distribution"></div>
-		</div>
+		<section class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="section-paragraph">In this study of people who have comitted suicide, Men are more the double that of Female.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center" id="scatter" class="custom-chart"></div>
+                </div>
+            </div>
+        </section>
 
-		<div class="row">
-			<h3>years to salary corelation</h3>
-			<div id="scatter"></div>
-		</div>
+		<section class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="section-paragraph">In this study of people who have comitted suicide, Men are more the double that of Female.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center" id="line-graph" class="custom-chart"></div>
+                </div>
+            </div>
+        </section>
 
-		<div class="row">
-			<div id="line-graph"></div>
-		</div>
-		<div class="row">
-			<div id="line-graph-2"></div>
-		</div>
-
-
-
-
-
-
-
-
-
-	</div>
+    		<section class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="section-paragraph">In this study of people who have comitted suicide, Men are more the double that of Female.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center" id="line-graph-2" class="custom-chart"></div>
+                </div>
+            </div>
+        </section>    
+	</main>
 </body>
 
 </html>

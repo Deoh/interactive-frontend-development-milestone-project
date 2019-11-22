@@ -46,7 +46,7 @@ function show_suicide_per_gender(ndx) {
     dc.barChart("#gender-balance")
         .width(350)
         .height(250)
-        .margins({ top: 10, right: 50, bottom: 30, left: 50 })
+        .margins({ top: 10, right: 60, bottom: 30, left: 60 })
         .dimension(dim)
         .group(group)
         .transitionDuration(500)
@@ -64,7 +64,7 @@ function show_suicide_per_age(ndx) {
     dc.barChart("#age-balance")
         .width(550)
         .height(250)
-        .margins({ top: 10, right: 50, bottom: 30, left: 50 })
+        .margins({ top: 10, right: 60, bottom: 30, left: 60 })
         .dimension(dim)
         .group(group)
         .transitionDuration(500)
@@ -98,7 +98,7 @@ function show_suicide_per_gender_pie(ndx) {
     var count_group = gender_dim.group().reduceSum(dc.pluck('suicides_no'));
 
         dc.pieChart('#suicide-per-gender-pie')
-            .height(350)
+            .height(250)
             .radius(100)
             .transitionDuration(1500)
             .dimension(gender_dim)
