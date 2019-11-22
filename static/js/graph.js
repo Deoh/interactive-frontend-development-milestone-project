@@ -153,7 +153,7 @@ function show_generation_distribution(ndx) {
         );
     }
 
-    var dim = ndx.dimension(dc.pluck('sex'))
+    var dim = ndx.dimension(dc.pluck('sex'));
     var boomersByGender = genByGender(dim, "Boomers");
     var gigenByGender = genByGender(dim, "G.I. Generation");
     var genxByGender = genByGender(dim, "Generation X");
@@ -217,7 +217,7 @@ function show_suicide_line_graph (ndx) {
                 } else {
                     return 0;
                 }
-            }
+            };
         }
 
         var maleSuicidePerYear = date_dim.group().reduceSum(spend_by_name('male'));
@@ -256,7 +256,7 @@ function show_suicide_line_graph_2 (ndx) {
                 } else {
                     return 0;
                 }
-            }
+            };
         }
         var boomersSuicidePerYear = date_dim.group().reduceSum(spend_by_name('boomers'));
         var gigenSuicidePerYear = date_dim.group().reduceSum(spend_by_name('G.I. Generation'));
