@@ -1,6 +1,5 @@
-.selector-heading, #year-selector {
-    display: inline-block;
-    float: none;
+body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
 }
 
@@ -16,3 +15,58 @@
 .custom-chart {
     margin-bottom: 40px;
 }
+
+.center {
+    text-align: center;
+}
+
+/*-------------------------------Colour*/
+.background-color-theme {
+    background-color: #e6e6e6;
+}
+
+/*-------------------------------Jumbotron*/
+
+.jumbotron-container {
+    margin: 0;
+    padding: 0;
+    height: 90vh;
+
+    background: url(../images/Blue-World-map.png) no-repeat center top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: contain;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.opaque-overlay {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color:  #e6e6e6;
+}
+
+
+
+.selector-section {
+    padding: 10px
+}
+
+.selector-heading, #year-selector {
+    display: inline-block;
+    float: none;
+    margin: 0;
+}
+
+
+
+
+
