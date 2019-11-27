@@ -12,18 +12,18 @@ ADD WIREFRAME, MOCKUP
 
 ## Features
 
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
- 
-### Existing Features
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
-- ...
-
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
-
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+The site is split into a number of sections to represent different aspects of the dataset. Scrolling down the page, your first greeted with the option to filter subsequent charts based on the
+year between 1985 to 2015.
+Scrolling further down the page you'll find chart the will show you:
+- The gender balance of suicides.
+- The age distrbution.
+- The number of suicide between the generations.
+- The gender distrbution between the generations.
+- The correlation suicide rates per year.
 
 ### Features Left to Implement
-- Another feature idea
+- Add a number display showing the gender balance as a percentage value. 
+- Add a Global heat map to show the suicide rates between countries.
 
 ## Technologies Used
 
@@ -50,12 +50,24 @@ In addition, you may also use this section to discuss plans for additional featu
     
 - [Bootstrap](https://getbootstrap.com)
     - The project uses **Bootstrap**, a front-end component libraryto to help build a responsive, mobile-first website.
-- [Font Awesome](https://fontawesome.com)
-    - The social media, streaming and purchasing links use icons from **Font Awesome**.
 
 - [Google Fonts](https://fonts.google.com)
     -  The project uses **Google Fonts** for the font styling of the website.
 ## Testing
+
+Through manual testing:
+
+- The navbar should scales correctly across different browsers and screen sizes sticking to the top as the user scroll the page and the navbar brand link works correctly.
+- The website title should scales correctly across different screen sizes.
+- The year selector when clicked should filters the dataset as intended. 
+- The charts should all be linked together. Clicking on each graph should provide an addtional level of data filtering.
+
+### Certain issues discovered when navigating the website were:
+
+- The size of the year selector dropdown is unexpectedly long and will need to be fixed.
+- The charts do not scale correctly across different screen sizes.
+- stacked chart doesn't display the information accuratly. more work needs to be done on the custom reducer.
+
 
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 

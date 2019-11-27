@@ -9,13 +9,12 @@ queue()
         
         show_year_selector(ndx);
         show_suicide_per_gender(ndx);
-        show_suicide_per_age(ndx);
-        show_suicide_per_generation(ndx);
+        //show_suicide_per_age(ndx);
+        //show_suicide_per_generation(ndx);
 
-        show_suicide_per_gender_pie(ndx);
-        show_suicide_per_age_pie(ndx);
-        show_suicide_per_generation_pie(ndx);
-        show_generation_distribution(ndx);
+        //show_suicide_per_gender_pie(ndx);
+        //show_suicide_per_age_pie(ndx);
+        //show_gender_generation_stack(ndx);
 
         var parseDate = d3.time.format("%Y").parse;
         suicideData.forEach(function(d){
@@ -23,9 +22,9 @@ queue()
             d.suicides_no = parseInt(d.suicides_no);
         });
 
-        show_years_to_suicide_correlation(ndx);
-        show_suicide_line_graph (ndx);
-        show_suicide_line_graph_2 (ndx);
+        //show_suicide_per_year_correlation(ndx);
+        //show_genderSuicide_per_year_correlation (ndx);
+        //show_generationSuicide_per_year_correlation (ndx);
 
         dc.renderAll();
 }
@@ -57,7 +56,7 @@ function show_suicide_per_gender(ndx) {
         .yAxis().ticks(5);
 }
 
-function show_suicide_per_age(ndx) {
+/*function show_suicide_per_age(ndx) {
     var dim = ndx.dimension(dc.pluck('age'));
     var group = dim.group().reduceSum(dc.pluck('suicides_no'));
 
@@ -129,7 +128,7 @@ function show_suicide_per_generation_pie(ndx) {
             .group(count_group);
 }
 
-function show_generation_distribution(ndx) {
+function show_gender_generation_stack(ndx) {
 
     function genByGender(dimension, generation) {
         return dimension.group().reduce(
@@ -161,7 +160,7 @@ function show_generation_distribution(ndx) {
     var millenialsByGender = genByGender(dim, "Millenials");
     var silentByGender = genByGender(dim, "Silent");
 
-    dc.barChart("#suicide-distribution")
+    dc.barChart("#suicide-stack")
         .width(400)
         .height(250)
         .margins({ top: 10, right: 150, bottom: 30, left: 30 })
@@ -186,14 +185,15 @@ function show_generation_distribution(ndx) {
         .legend(dc.legend().x(300).y(20).itemHeight(15).gap(5));
 }
 
-function show_years_to_suicide_correlation(ndx) {
+function show_suicide_per_year_correlation(ndx) {
 
 
         var date_dim = ndx.dimension(dc.pluck('year'));
         var total_spend_per_date = date_dim.group().reduceSum(dc.pluck('suicides_no'));
         var minDate = date_dim.bottom(1)[0].year;
         var maxDate = date_dim.top(1)[0].year;
-        dc.lineChart("#scatter")
+
+        dc.lineChart("#suicide-per-year")
             .width(990)
             .height(250)
             .margins({top: 10, right: 50, bottom: 30, left: 50})
@@ -206,11 +206,11 @@ function show_years_to_suicide_correlation(ndx) {
 
 }
 
-function show_suicide_line_graph (ndx) {
+function show_genderSuicide_per_year_correlation (ndx) {
         var date_dim = ndx.dimension(dc.pluck('year'));
         var minDate = date_dim.bottom(1)[0].year;
         var maxDate = date_dim.top(1)[0].year;
-        function spend_by_name(name) {
+        function suicide_by_gender(name) {
             return function(d) {
                 if (d.sex === name) {
                     return +d.suicides_no;
@@ -220,10 +220,10 @@ function show_suicide_line_graph (ndx) {
             };
         }
 
-        var maleSuicidePerYear = date_dim.group().reduceSum(spend_by_name('male'));
-        var femaleSuicidePerYear = date_dim.group().reduceSum(spend_by_name('female'));
+        var maleSuicidePerYear = date_dim.group().reduceSum(suicide_by_gender('male'));
+        var femaleSuicidePerYear = date_dim.group().reduceSum(suicide_by_gender('female'));
         
-        var compositeChart = dc.compositeChart('#line-graph');
+        var compositeChart = dc.compositeChart('#genderSuicide-per-year');
         compositeChart
             .width(990)
             .height(250)
@@ -247,11 +247,11 @@ function show_suicide_line_graph (ndx) {
             .render();
 }
 
-function show_suicide_line_graph_2 (ndx) {
+function show_generationSuicide_per_year_correlation (ndx) {
         var date_dim = ndx.dimension(dc.pluck('year'));
         var minDate = date_dim.bottom(1)[0].year;
         var maxDate = date_dim.top(1)[0].year;
-        function spend_by_name(name) {
+        function suicide_by_gen(name) {
             return function(d) {
                 if (d.generation === name) {
                     return +d.suicides_no;
@@ -260,14 +260,14 @@ function show_suicide_line_graph_2 (ndx) {
                 }
             };
         }
-        var boomersSuicidePerYear = date_dim.group().reduceSum(spend_by_name('boomers'));
-        var gigenSuicidePerYear = date_dim.group().reduceSum(spend_by_name('G.I. Generation'));
-        var genxSuicidePerYear = date_dim.group().reduceSum(spend_by_name('Generation X'));
-        var genzSuicidePerYear = date_dim.group().reduceSum(spend_by_name('Generation Z'));
-        var millSuicidePerYear = date_dim.group().reduceSum(spend_by_name('Millenials'));
-        var silentSuicidePerYear = date_dim.group().reduceSum(spend_by_name('Silent'));
+        var boomersSuicidePerYear = date_dim.group().reduceSum(suicide_by_gen('boomers'));
+        var gigenSuicidePerYear = date_dim.group().reduceSum(suicide_by_gen('G.I. Generation'));
+        var genxSuicidePerYear = date_dim.group().reduceSum(suicide_by_gen('Generation X'));
+        var genzSuicidePerYear = date_dim.group().reduceSum(suicide_by_gen('Generation Z'));
+        var millSuicidePerYear = date_dim.group().reduceSum(suicide_by_gen('Millenials'));
+        var silentSuicidePerYear = date_dim.group().reduceSum(suicide_by_gen('Silent'));
         
-        var compositeChart = dc.compositeChart('#line-graph-2');
+        var compositeChart = dc.compositeChart('#generationSuicide-per-year');
         compositeChart
             .width(990)
             .height(250)
@@ -300,4 +300,4 @@ function show_suicide_line_graph_2 (ndx) {
             ])
             .brushOn(true)
             .render();
-}
+}*/

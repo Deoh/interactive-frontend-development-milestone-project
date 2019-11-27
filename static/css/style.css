@@ -51,9 +51,25 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color:  #e6e6e6;
+    background-color:  #e6e6e6; /*make background ligter*/
 }
 
+.heading {
+    font-size: 50px;
+}
+
+.sub-title {
+    font-size: 19px;
+}
+
+@media (min-width: 768px) {
+    .sub-title {
+        font-size: 30px;
+    }
+    .heading {
+        font-size: 80px
+    }
+}
 
 
 .selector-section {
@@ -66,7 +82,17 @@ body {
     margin: 0;
 }
 
+#year-selector {
+    max-height: 100px;
+}
 
+/*-------------------------------footer*/
 
+#footer {
+    padding: 25px;
+}
 
+footer {
+    min-height: 50px;
+}
 
