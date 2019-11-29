@@ -1,3 +1,4 @@
+/*----------------------------------------Special paddings/ margins/ text */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -5,11 +6,12 @@ body {
 
 .section {
     border-bottom: 1px solid #e6e6e6;
-    padding: 30px 0;
+    padding: 30px 30px;
 }
 
 .section-paragraph {
     line-height: 1.2;
+    font-size: 14px;
 }
 
 .custom-chart {
@@ -26,7 +28,6 @@ body {
 }
 
 /*-------------------------------Jumbotron*/
-
 .jumbotron-container {
     margin: 0;
     padding: 0;
@@ -51,7 +52,7 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color:  #e6e6e6; /*make background ligter*/
+    background-color:  #e6e6e6; 
 }
 
 .heading {
@@ -62,16 +63,7 @@ body {
     font-size: 19px;
 }
 
-@media (min-width: 768px) {
-    .sub-title {
-        font-size: 30px;
-    }
-    .heading {
-        font-size: 80px
-    }
-}
-
-
+/*-------------------------------Year Selector*/
 .selector-section {
     padding: 10px
 }
@@ -96,3 +88,16 @@ footer {
     min-height: 50px;
 }
 
+/*-------------------------------Media Queries*/
+
+@media (min-width: 768px) {
+    .sub-title {
+        font-size: 30px;
+    }
+    .heading {
+        font-size: 80px
+    }
+    .section-paragraph {
+        font-size: 25px
+    }
+}

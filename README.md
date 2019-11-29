@@ -55,58 +55,39 @@ Scrolling further down the page you'll find chart the will show you:
     -  The project uses **Google Fonts** for the font styling of the website.
 ## Testing
 
-Through manual testing:
+The website was tested using `Google Chrome Dev tools` for various devices sizes to check scalability across different devicees and screen size.
+
+Through manual testing both desktop and mobile:
 
 - The navbar should scales correctly across different browsers and screen sizes sticking to the top as the user scroll the page and the navbar brand link works correctly.
 - The website title should scales correctly across different screen sizes.
 - The year selector when clicked should filters the dataset as intended. 
 - The charts should all be linked together. Clicking on each graph should provide an addtional level of data filtering.
 
+### HTML, CSS & JavaScript code
+- HTML and CSS validation via [w3.org](https://www.w3.org/).
+- JavaScript validation via [jshint.com](https://jshint.com/).
+
 ### Certain issues discovered when navigating the website were:
 
 - The size of the year selector dropdown is unexpectedly long and will need to be fixed.
-- The charts do not scale correctly across different screen sizes.
-- stacked chart doesn't display the information accuratly. more work needs to be done on the custom reducer.
-
-
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
-
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
-
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
-
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
-
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
-
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
-
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+- The charts do not scale correctly across different screen sizes. 
+- The stacked chart doesn't display the information accuratly. more work needs to be done on the custom reducer.
 
 ## Deployment
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
-
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
-
-In addition, if it is not obvious, you should also describe how to run your code locally.
-
+This project is deployed though GitHub pages.
+- From the GitHub page click on the 'Settings' link,  and scroll down to the GitHub Pages section.
+- click the 'source' tab and select 'Master Branch'. a link will then be provide.
 
 ## Credits
 
 ### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
+- The CSV data for this project was copied from [kaggle.com](https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016)
 
 ### Media
 - The photos used in this site were obtained from [pngriver.com](https://pngriver.com/)
 
 ### Acknowledgements
 
-- I received inspiration for this project from X
+- I received inspiration for this project from code institute 'Data visualization mini project'

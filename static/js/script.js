@@ -1,14 +1,17 @@
-/*$(document).ready(function() {
+$(document).ready(function() {
  
 
  	 
     if (screen.width < 993) {
-        $(".line-graph-2").hide();
+        $(".genderSuicide-per-year").hide();
+        $(".suicide-per-year").hide();
+        $(".generationSuicide-per-year").hide();
+    } else {
+
+        $(".genderSuicide-per-year").show();
+        $(".suicide-per-year").show();
+        $(".generationSuicide-per-year").show();
     }
-    else {
-
-        $(".line-graph-2").show();
-    }
 
 
-}); */
+});

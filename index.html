@@ -21,9 +21,9 @@
 
 <body>
 	<!----------------------NAVBAR-------------------->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-		<a class="navbar-brand" href="#">Global Suicide Rate</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+		<a class="navbar-brand" href="index.html">Global Suicide Rate</a>
+		<!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -33,7 +33,7 @@
 				<a class="nav-item nav-link" href="#">Pricing</a>
 				<a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
 			</div>
-		</div>
+		</div-->
 	</nav>
 
 	<!----------------------FRONT PAGE-------------------->
@@ -66,18 +66,13 @@
 		<section class="section">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-12 col-sm-6 text-center">
-						<p class="section-paragraph">In this study of people who have comitted suicide, Men are more the
-							double that of Female.</p>
-					</div>
-					<div class="col-xs-12 col-sm-6 text-center">
-						<p class="section-paragraph">In this study of people who have comitted suicide, Men are more the
-							double that of Female.</p>
+					<div class="col-12 text-center">
+						<p class="section-paragraph"> These charts represent the rates of suicide between the genders. This shows Men are more then twice as likley to commit suicide.</p>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-xs-12 col-sm-6 text-center" id="gender-balance" class="custom-chart"></div>
-					<div class="col-xs-12 col-sm-6 text-center" id="suicide-per-gender-pie" class="custom-chart"></div>
+					<div class="col-xs-12 col-sm-6 text-center custom-chart" id="gender-balance"></div>
+					<div class="col-xs-12 col-sm-6 text-center custom-chart" id="suicide-per-gender-pie"></div>
 				</div>
 			</div>
 		</section>
@@ -86,18 +81,13 @@
 		<section class="section background-color-theme">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-12 col-sm-6 text-center">
-						<p class="section-paragraph">In this study of people who have comitted suicide, Men are more the
-							double that of Female.</p>
-					</div>
-					<div class="col-xs-12 col-sm-6 text-center">
-						<p class="section-paragraph">In this study of people who have comitted suicide, Men are more the
-							double that of Female.</p>
+					<div class="col-12 text-center">
+						<p class="section-paragraph">These charts show the rates of suicide is most prevalent in people who are aged between 35 & 54 years of age.</p>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-xs-12 col-sm-6 text-center" id="age-balance" class="custom-chart"></div>
-					<div class="col-xs-12 col-sm-6 text-center" id="suicide-per-age-pie" class="custom-chart"></div>
+					<div class="col-xs-12 col-sm-6 text-center custom-chart" id="age-balance"></div>
+					<div class="col-xs-12 col-sm-6 text-center custom-chart" id="suicide-per-age-pie"></div>
 				</div>
 			</div>
 		</section>
@@ -106,18 +96,13 @@
 		<section class="section">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-12 col-sm-6 text-center">
-						<p class="section-paragraph">In this study of people who have comitted suicide, Men are more the
-							double that of Female.</p>
-					</div>
-					<div class="col-xs-12 col-sm-6 text-center">
-						<p class="section-paragraph">In this study of people who have comitted suicide, Men are more the
-							double that of Female.</p>
+					<div class="col-12 text-center">
+						<p class="section-paragraph">These charts show the rates of suicide is most prevalent amongst the baby Boomer generation.</p>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-xs-12 col-sm-6 text-center" id="generation-balance" class="custom-chart"></div>
-					<div class="col-xs-12 col-sm-6 text-center" id="suicide-per-generation-pie" class="custom-chart">
+					<div class="col-xs-12 col-sm-6 text-center custom-chart" id="generation-balance"></div>
+					<div class="col-xs-12 col-sm-6 text-center custom-chart" id="suicide-per-generation-pie">
 					</div>
 				</div>
 			</div>
@@ -128,59 +113,59 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-12 text-center">
-						<p class="section-paragraph">In this study of people who have comitted suicide, Men are more the
-							double that of Female.</p>
+						<p class="section-paragraph">This Chart represents the gender distribution thoughout the generations.</p>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-12 text-center" id="suicide-distribution" class="custom-chart"></div>
+					<div class="col-12 text-center custom-chart" id="suicide-stack"></div>
 				</div>
 			</div>
 		</section>
 
-		<section class="section">
+    <!----------------------SUICIDE PER YEAR-------------------->
+		<section class="section suicide-per-year">
 			<div class="container">
 				<div class="row">
 					<div class="col-12 text-center">
-						<p class="section-paragraph">In this study of people who have comitted suicide, Men are more the
-							double that of Female.</p>
+						<p class="section-paragraph">These charts gives a look at the rates of suicide over time.</p>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-12 text-center" id="scatter" class="custom-chart"></div>
+					<div class="col-12 text-center custom-chart" id="suicide-per-year"></div>
 				</div>
 			</div>
 		</section>
 
-		<section class="section background-color-theme">
+    <!----------------------GENDER/SUICIDE PER YEAR-------------------->
+		<section class="section background-color-theme genderSuicide-per-year">
 			<div class="container">
 				<div class="row">
 					<div class="col-12 text-center">
-						<p class="section-paragraph">In this study of people who have comitted suicide, Men are more the
-							double that of Female.</p>
+						<p class="section-paragraph"></p>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-12 text-center" id="line-graph" class="custom-chart"></div>
+					<div class="col-12 text-center custom-chart" id="genderSuicide-per-year"></div>
 				</div>
 			</div>
 		</section>
 
-		<section class="section line-graph-2">
+    <!----------------------GENERATION/SUICIDE PER YEAR-------------------->
+		<section class="section generationSuicide-per-year">
 			<div class="container">
 				<div class="row">
 					<div class="col-12 text-center">
-						<p class="section-paragraph">In this study of people who have comitted suicide, Men are more the
-							double that of Female.</p>
+						<p class="section-paragraph"></p>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-12 text-center" id="line-graph-2" class="custom-chart"></div>
+					<div class="col-12 text-center custom-chart" id="generationSuicide-per-year"></div>
 				</div>
 			</div>
 		</section>
 	</main>
 
+    <!----------------------FOOTER-------------------->
     <footer class="container-fluid background-color-theme">
         <div id="footer" class="row">
             <div class="col-12 center">
@@ -189,8 +174,8 @@
         </div>
     </footer>  
 
-    <!--<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-	<script src="static/js/script.js"></script> -->   
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+	<script src="static/js/script.js"></script>
 </body>
 
 </html>

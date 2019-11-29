@@ -9,12 +9,13 @@ queue()
         
         show_year_selector(ndx);
         show_suicide_per_gender(ndx);
-        //show_suicide_per_age(ndx);
-        //show_suicide_per_generation(ndx);
+        show_suicide_per_age(ndx);
+        show_suicide_per_generation(ndx);
 
-        //show_suicide_per_gender_pie(ndx);
-        //show_suicide_per_age_pie(ndx);
-        //show_gender_generation_stack(ndx);
+        show_suicide_per_gender_pie(ndx);
+        show_suicide_per_age_pie(ndx);
+        show_suicide_per_generation_pie(ndx);
+        show_gender_generation_stack(ndx);
 
         var parseDate = d3.time.format("%Y").parse;
         suicideData.forEach(function(d){
@@ -22,9 +23,9 @@ queue()
             d.suicides_no = parseInt(d.suicides_no);
         });
 
-        //show_suicide_per_year_correlation(ndx);
-        //show_genderSuicide_per_year_correlation (ndx);
-        //show_generationSuicide_per_year_correlation (ndx);
+        show_suicide_per_year_correlation(ndx);
+        show_genderSuicide_per_year_correlation (ndx);
+        show_generationSuicide_per_year_correlation (ndx);
 
         dc.renderAll();
 }
@@ -56,7 +57,7 @@ function show_suicide_per_gender(ndx) {
         .yAxis().ticks(5);
 }
 
-/*function show_suicide_per_age(ndx) {
+function show_suicide_per_age(ndx) {
     var dim = ndx.dimension(dc.pluck('age'));
     var group = dim.group().reduceSum(dc.pluck('suicides_no'));
 
@@ -189,7 +190,7 @@ function show_suicide_per_year_correlation(ndx) {
 
 
         var date_dim = ndx.dimension(dc.pluck('year'));
-        var total_spend_per_date = date_dim.group().reduceSum(dc.pluck('suicides_no'));
+        var total_suicide = date_dim.group().reduceSum(dc.pluck('suicides_no'));
         var minDate = date_dim.bottom(1)[0].year;
         var maxDate = date_dim.top(1)[0].year;
 
@@ -198,7 +199,7 @@ function show_suicide_per_year_correlation(ndx) {
             .height(250)
             .margins({top: 10, right: 50, bottom: 30, left: 50})
             .dimension(date_dim)
-            .group(total_spend_per_date)
+            .group(total_suicide)
             .transitionDuration(500)
             .x(d3.time.scale().domain([minDate,maxDate]))
             .xAxisLabel("Year")
@@ -300,4 +301,4 @@ function show_generationSuicide_per_year_correlation (ndx) {
             ])
             .brushOn(true)
             .render();
-}*/
+}
